@@ -1,0 +1,64 @@
+generated: '2026-08-09'
+method: probed
+source: live GET of the /.well-known/ discovery surface on every host in apis.yml
+host: https://www.carta.healthcare
+note: >-
+  No /.well-known/ document is published on any Carta Healthcare host. No developer,
+  API, docs, app or status subdomain resolves (api., docs., developer., developers.,
+  app., portal., status., trust., mcp.carta.healthcare all fail DNS), so www is the
+  only host with a well-known surface to probe.
+soft_200_warning: >-
+  IMPORTANT for future rounds — /.well-known/oauth-authorization-server and
+  /.well-known/oauth-protected-resource each return HTTP 200 with
+  Content-Type text/html, but the body is the WordPress HOMEPAGE
+  (<title>Healthcare AI Platform for Clinical Data | Carta Healthcare</title>,
+  149255 bytes), not a discovery document. A control probe of
+  /.well-known/zzz-control-nonsense-12345 returns 404 (82754 bytes,
+  <title>Page not found</title>), which proves the 200 is a WordPress rewrite
+  artifact on the oauth-* paths and NOT evidence of an authorization server.
+  These are recorded as false positives and earn no credit.
+documents:
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/openid-configuration
+  status: 404
+- path: /.well-known/oauth-authorization-server
+  status: 200
+  content_type: text/html
+  valid: false
+  reason: soft-200; body is the WordPress homepage HTML, not RFC 8414 JSON
+- path: /.well-known/oauth-protected-resource
+  status: 200
+  content_type: text/html
+  valid: false
+  reason: soft-200; body is the WordPress homepage HTML, not RFC 9728 JSON
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
+- path: /.well-known/agent-card.json
+  status: 404
+- path: /.well-known/agent.json
+  status: 404
+- path: /.well-known/mcp.json
+  status: 404
+contract_discovery:
+  note: STEP 0b contract discovery — every probe returned the WordPress 404 HTML shell.
+  probes:
+  - {url: 'https://www.carta.healthcare/openapi.json', status: 404, content_type: text/html}
+  - {url: 'https://www.carta.healthcare/openapi.yaml', status: 404, content_type: text/html}
+  - {url: 'https://www.carta.healthcare/swagger.json', status: 404, content_type: text/html}
+  - {url: 'https://www.carta.healthcare/v1/openapi.json', status: 404, content_type: text/html}
+  - {url: 'https://www.carta.healthcare/api-docs', status: 404, content_type: text/html}
+  - {url: 'https://www.carta.healthcare/docs', status: 404, content_type: text/html}
+  - {url: 'https://www.carta.healthcare/redoc', status: 404, content_type: text/html}
+  - {url: 'https://www.carta.healthcare/graphql', status: 404, content_type: text/html}
+  - {url: 'https://www.carta.healthcare/llms.txt', status: 404, content_type: text/html}
+  only_machine_readable_endpoint:
+    url: https://www.carta.healthcare/wp-json/
+    status: 200
+    content_type: application/json
+    note: >-
+      WordPress core REST API shipped by the marketing CMS (namespaces oembed/1.0,
+      akismet/v1, oxygen-vsb-connection, wp/v2). This is a CMS default, not a Carta
+      Healthcare product API, and is deliberately NOT registered as an API in apis.yml.

@@ -1,0 +1,60 @@
+generated: '2026-08-09'
+method: searched
+source: https://www.carta.healthcare/our-story/recognized-trusted/
+note: >-
+  Carta Healthcare publishes no API contract, so no API-level conformance (OAuth 2.0,
+  OIDC, FHIR, RFC 9457, pagination, idempotency) can be asserted or derived. What the
+  company does publish is an organizational compliance and clinical-registry
+  certification posture, captured below with the page each claim came from.
+standards:
+- id: soc2-type2
+  conforms: true
+  evidence: >-
+    "Carta Healthcare achieved its service commitments and system requirements as
+    measured by the SOC 2 criteria for security, availability, and confidentiality."
+    Type 2 examination, unqualified opinion, auditor AssurancePoint LLC, examination
+    period 2022-06-01 to 2023-05-31; company states it intends to provide annual SOC 2
+    reports.
+  source: https://www.carta.healthcare/news-and-pr/carta-healthcare-successfully-completes-type-2-soc-2-examination-with-an-unqualified-opinion/
+- id: hipaa
+  conforms: true
+  evidence: >-
+    Privacy Policy states Protected Health Information processed on behalf of hospital
+    and health system clients through Atlas, Voyager and Lighthouse "is governed by the
+    Health Insurance Portability and Accountability Act (HIPAA)" and the applicable
+    business associate agreements. Scope is PHI processing as a business associate, not
+    a public API.
+  source: https://www.carta.healthcare/gdpr-policy/
+- id: gdpr
+  conforms: true
+  evidence: Company publishes a combined GDPR / Privacy Policy, last updated 2025-12-10.
+  source: https://www.carta.healthcare/gdpr-policy/
+- id: acc-ncdr-certified-vendor
+  conforms: true
+  evidence: >-
+    American College of Cardiology NCDR certified software vendor; certifications named
+    across the CathPCI Registry, the AFib Ablation Registry and the STS/ACC Transcatheter
+    Valve Therapy (TVT) Registry.
+  source: https://www.carta.healthcare/our-story/recognized-trusted/
+- id: vascular-quality-initiative
+  conforms: true
+  evidence: Named registry program supported for abstraction and submission (VQI).
+  source: https://www.carta.healthcare/our-story/recognized-trusted/
+- id: hitrust
+  conforms: false
+  evidence: No HITRUST certification claim found on any public page.
+- id: iso-27001
+  conforms: false
+  evidence: No ISO 27001 certification claim found on any public page.
+- id: oauth2
+  conforms: false
+  evidence: No public API and no authorization server; /.well-known/oauth-authorization-server is a WordPress soft-200 HTML page.
+- id: fhir
+  conforms: false
+  evidence: >-
+    Marketing pages describe EMR integration generically ("integrates with existing EHRs
+    and virtually any other data type") but name no FHIR, HL7 v2 or CDA conformance and
+    publish no capability statement.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: No public API contract exists to evaluate.

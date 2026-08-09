@@ -42,5 +42,18 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Carta Healthcare is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+Carta Healthcare, Inc. is a San Francisco based clinical data management company that applies a
+"Hybrid Intelligence" model — proprietary AI paired with certified human clinical abstractors — to
+extract, validate and submit structured clinical data on behalf of hospitals and health systems.
+Its products include Voyager (AI data platform), Lighthouse and Atlas (AI-assisted clinical registry
+abstraction and submission), Navigator (clinical data intelligence) and expert abstraction services.
+
+**No public API surface.** Carta Healthcare publishes no developer program, API documentation, or
+machine-readable API contract. Every contract-discovery probe against `www.carta.healthcare` returned
+the WordPress 404 shell, no developer/docs/api subdomain resolves, and the only machine-readable
+endpoint on the domain is WordPress core's own `/wp-json/`. See `well-known/carta-healthcare-well-known.yml`
+for the full probe record and the `x-coverage` block in `apis.yml`.
+
+- https://www.carta.healthcare/
+- https://www.carta.healthcare/our-story/recognized-trusted/
+- https://www.carta.healthcare/gdpr-policy/
