@@ -14,6 +14,17 @@ description: 'Carta Healthcare, Inc. is a San Francisco based clinical data mana
   integrates directly with hospital EMR environments under enterprise agreements; it
   publishes no public developer program, API documentation, or machine-readable API
   contract on its public web surface.'
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 image: https://www.carta.healthcare/wp-content/uploads/2025/06/Carta-logo.png
 url: https://raw.githubusercontent.com/api-evangelist/carta-healthcare/refs/heads/main/apis.yml
 x-type: company
