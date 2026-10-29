@@ -64,18 +64,82 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Carta Healthcare, Inc. is a San Francisco based clinical data management company that applies a
-"Hybrid Intelligence" model — proprietary AI paired with certified human clinical abstractors — to
-extract, validate and submit structured clinical data on behalf of hospitals and health systems.
-Its products include Voyager (AI data platform), Lighthouse and Atlas (AI-assisted clinical registry
-abstraction and submission), Navigator (clinical data intelligence) and expert abstraction services.
+Carta Healthcare, Inc. is a San Francisco based clinical data management company that applies a "Hybrid Intelligence" model — proprietary AI paired with certified human clinical abstractors — to extract, validate and submit structured clinical data on behalf of hospitals and health systems. Its product family covers Voyager (the underlying AI data platform trained on electronic medical record content), Lighthouse and Atlas (AI-assisted clinical registry abstraction and submission, including the ACC NCDR, STS/ACC TVT and Vascular Quality Initiative registries), Navigator (clinical data intelligence and analytics), Harbor (cohort selection and clinical trial matching) and outsourced expert abstraction services. Carta Healthcare is an NCDR certified software vendor and has completed a Type 2 SOC 2 examination with an unqualified opinion covering security, availability and confidentiality. The company sells and integrates directly with hospital EMR environments under enterprise agreements; it publishes no public developer program, API documentation, or machine-readable API contract on its public web surface.
 
-**No public API surface.** Carta Healthcare publishes no developer program, API documentation, or
-machine-readable API contract. Every contract-discovery probe against `www.carta.healthcare` returned
-the WordPress 404 shell, no developer/docs/api subdomain resolves, and the only machine-readable
-endpoint on the domain is WordPress core's own `/wp-json/`. See `well-known/carta-healthcare-well-known.yml`
-for the full probe record and the `x-coverage` block in `apis.yml`.
+**Areas:** Healthcare · Health IT · Clinical Data · Artificial Intelligence · Data Abstraction · Clinical Registries · Electronic Health Records · Analytics · HIPAA · Company
 
-- https://www.carta.healthcare/
-- https://www.carta.healthcare/our-story/recognized-trusted/
-- https://www.carta.healthcare/gdpr-policy/
+## Carta Healthcare on APIs.io
+
+Everything profiled for Carta Healthcare is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/carta-healthcare/](https://apis.io/providers/carta-healthcare/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Carta Healthcare Domain Security](https://apis.io/security/carta-healthcare/carta-healthcare-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.carta.healthcare/)
+- [Blog](https://www.carta.healthcare/resource-library/#blogs)
+- [Compliance](https://www.carta.healthcare/news-and-pr/carta-healthcare-successfully-completes-type-2-soc-2-examination-with-an-unqualified-opinion/)
+- [Privacy policy](https://www.carta.healthcare/gdpr-policy/)
+
+## API Evangelist rating
+
+**Kin Score 12.4** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 56.3 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 2.4 |
+| Access clarity | 18.4 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 14.7** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/carta-healthcare/](https://apis.io/providers/carta-healthcare/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Carta Healthcare: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/carta-healthcare/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
